@@ -1,0 +1,55 @@
+{%extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'index_css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="index-page">
+  <div class="content-layout">
+    <!-- Texto a la izquierda -->
+    <div class="hero-text">
+      <h1 class="simple-text">Revoluciona tu<br></h1>
+        <h1 class="gradient-text">portafolio</h1>
+        <h1 class="gradient-text2">Crypto</h1>
+      <p>Accede a las herramientas más avanzadas de trading,<br>
+          análisis en tiempo real y estrategias profesionales para<br>
+          maximizar tus inversiones en criptomonedas.</p>
+      <button class="gradient-button">Comenzar Trading</button>
+      <button class="gradient-button2">Ver Demo</button>
+      <p>Seguridad Bancaria</p>
+      <p>Ejecución Instantánea</p>
+    </div>
+
+    <!-- Panel a la derecha -->
+    <div class="trading-panel">
+      <div class="panel-header">
+        <h3>Panel de Trading</h3>
+        <span class="live-indicator">● En vivo</span>
+      </div>
+
+      <div class="price-cards">
+        <div class="card">
+          <div class="card-title">BTC/USD <span class="green">+2.4%</span></div>
+          <div class="price">$67,890</div>
+        </div>
+        <div class="card">
+          <div class="card-title">ETH/USD <span class="blue">+1.8%</span></div>
+          <div class="price">$3,456</div>
+        </div>
+      </div>
+
+      <div class="chart-placeholder">
+        <i class="icon">📈</i> Gráfico en tiempo real
+      </div>
+
+      <div class="dots">
+        <div class="dot left"></div>
+        <div class="dot right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+

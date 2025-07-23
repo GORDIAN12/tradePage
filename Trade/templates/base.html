@@ -1,0 +1,52 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Trading App</title>
+    <link rel="stylesheet" href="{% static 'base_css/base.css' %}">
+    {% block extra_css %} {% endblock %}
+      {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+
+<body>
+<div class="navbar-custom">
+    <ul class="nav justify-content-end">
+    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+  </li>
+  <li class="nav-item">
+	  <a class="nav-link" href="#">Mercado</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Trading</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Nosotros</a>
+  </li>
+   <li class="nav-item ">
+    <a class="nav-link" href="#">Iniciar Sesion</a>
+  </li>
+    <li class="nav-item ">
+        <a class="nav-link" href="#">Registrarse</a>
+  </li>
+</ul>
+	</div>
+
+    <main>
+        {% block content %}
+        <!-- Aquí se renderizará el contenido específico de cada página -->
+        {% endblock %}
+    </main>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2023 Crypto Trading App. Todos los derechos reservados.</p>
+        <p>Contacto:</p>
+    </div>
+</footer>
+</html>
+
