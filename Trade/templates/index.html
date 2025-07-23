@@ -3,6 +3,7 @@
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'index_css/index.css' %}">
 {% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 {% block content %}
 <div class="index-page">
@@ -26,22 +27,18 @@
       <div class="panel-header">
         <h3>Panel de Trading</h3>
         <span class="live-indicator">● En vivo</span>
-      </div>
+     </div>
 
       <div class="price-cards">
-        <div class="card">
-          <div class="card-title">BTC/USD <span class="green">+2.4%</span></div>
-          <div class="price">$67,890</div>
-        </div>
-        <div class="card">
-          <div class="card-title">ETH/USD <span class="blue">+1.8%</span></div>
-          <div class="price">$3,456</div>
-        </div>
-      </div>
+      <div class="card">
+  <div class="card-title">BTC/USD</div>
+  <div class="price" id="btc-price">$--</div>
+</div>
 
-      <div class="chart-placeholder">
-        <i class="icon">📈</i> Gráfico en tiempo real
-      </div>
+<div class="card">
+  <div class="card-title">ETH/USD</div>
+  <div class="price" id="eth-price">$--</div>
+</div>
 
       <div class="dots">
         <div class="dot left"></div>
@@ -50,6 +47,43 @@
     </div>
   </div>
 </div>
+</div>
+    <script>
+  async function fetchBTCPrice() {
+    try {
+      const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+      const data = await response.json();
+      const price = data.bitcoin.usd;
+
+      // Mostrar precio formateado
+      document.getElementById('btc-price').innerText = `$${price.toLocaleString()}`;
+    } catch (error) {
+      console.error('Error al obtener el precio de BTC:', error);
+    }
+  }
+
+  // Ejecutar al cargar y luego cada 30 segundos
+  fetchPrices();
+  setInterval(fetchPrices, 20000); // 20 segundos
+
+ async function fetchPrices() {
+    try {
+      const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd');
+      const data = await response.json();
+
+       // Actualizar precios
+      document.getElementById('btc-price').innerText = `$${data.bitcoin.usd.toLocaleString()}`;
+      document.getElementById('eth-price').innerText = `$${data.ethereum.usd.toLocaleString()}`;
+      document.getElementById('sol-price').innerText = `$${data.solana.usd.toLocaleString()}`;
+    } catch (error) {
+      console.error('Error al obtener el precio de BTC:', error);
+    }
+  }
+
+  // Ejecutar al cargar y luego cada 30 segundos
+  fetchBTCPrices();
+  setInterval(fetchPrices, 20000); // 20 segundos
+</script>
+
+
 {% endblock %}
-
-
