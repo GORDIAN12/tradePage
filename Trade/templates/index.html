@@ -77,7 +77,12 @@ async function fetchPrices() {
 
 fetchPrices();
 setInterval(fetchPrices, 20000); // 20 segundos
-
+/* POLKADOT
+      document.getElementById('dot-price').innerText = `$${data.polkadot.usd.toLocaleString()}`;
+      const dotChangeElem = document.getElementById('dot-change');
+    document.getElementById('dot-change').innerText = `${data.polkadot.usd_24h_change.toFixed(2)}%`;
+      dotChangeElem.style.color = dotChange >= 0 ? '#00ff73' : '#ff4d4d';
+*/
 </script>
 
 
