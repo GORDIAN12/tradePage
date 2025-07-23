@@ -88,19 +88,29 @@ color: #9ca3af;
   margin-bottom: 25px;
 }
 
-.card {
+.card-crypto  {
   flex: 1;
-  background-color: red;
+  background-image: radial-gradient(circle at 30% 40%, rgba(124, 58, 237, 0.15), transparent 60%);
   border: 1px solid rgba(124, 58, 237, 0.2);
-  border-radius: 10px;
+  border-radius: 30px;
+  border-color: green;
   padding: 15px;
   transition: 0.3s ease;
 }
 
+.card-crypto-eth  {
+  flex: 1;
+  background-image: radial-gradient(circle at 30% 40%, rgba(124, 58, 237, 0.15), transparent 60%);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 30px;
+  border-color: blue;
+  padding: 15px;
+  transition: 0.3s ease;
+}
 .card-title {
   font-size: 0.95rem;
+  color: white;
   display: flex;
-  justify-content: space-between;
   margin-bottom: 10px;
 }
 
@@ -117,6 +127,7 @@ color: #9ca3af;
 .price {
   font-size: 1.5rem;
   font-weight: bold;
+  color: white;
 }
 
 .chart-placeholder {
@@ -163,4 +174,27 @@ color: #9ca3af;
 .gradient-button2:hover {
   background-color: #1c0c2d; /* morado muy oscuro */
   box-shadow: 0 0 12px rgba(124, 58, 237, 0.4); /* ligero resplandor */
+}
+
+.text-Market{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.four-cards-crypto{
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 40px 40px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.crypto-logo{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
