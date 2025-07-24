@@ -229,7 +229,7 @@ color: #9ca3af;
    flex: 1;
     background-image: radial-gradient(circle at 30% 40%, rgba(0, 255, 163, 0.15), transparent 60%);
   border-radius: 30px;
-   border: 1px solid rgba(0, 255, 163, 0.25); /* rosa polkadot */
+   border: 1px solid rgba(0, 255, 163, 0.25);
   padding: 15px;
   transition: 0.3s ease;
   box-shadow: 0 0 20px rgba(0, 255, 163, 0.25);
@@ -358,4 +358,132 @@ color: #9ca3af;
   color: white;
   font-weight: bold;
   margin: 30px;
+}
+.icon-panel {
+  width: 50px;
+  height: 50px;           /* Altura igual al ancho para que sea cuadrado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 30%;
+}
+.card-crypto-sol2:nth-of-type(1) .icon-panel {
+  border: 1px solid rgba(0, 255, 163, 0.25);
+  box-shadow: 0 0 10px rgba(0, 255, 163, 0.25);
+}
+
+.card-crypto-sol2:nth-of-type(2) .icon-panel {
+  border: 1px solid rgba(247, 147, 26, 0.61);
+  box-shadow: 0 0 25px rgba(247, 147, 26, 0.45);
+}
+
+.card-crypto-sol2:nth-of-type(3) .icon-panel {
+  border: 1px solid rgba(49, 109, 195, 0.66);
+  box-shadow: 0 0 25px rgba(36, 105, 216, 0.58);
+}
+.card-crypto-sol2:nth-of-type(4) .icon-panel {
+  border: 1px solid rgba(170, 33, 202, 0.62);
+  box-shadow: 0 0 10px rgba(182, 23, 200, 0.64);
+}
+
+.card-crypto-sol2:nth-of-type(5) .icon-panel {
+  border: 1px solid rgba(27, 228, 198, 0.61);
+  box-shadow: 0 0 25px rgba(17, 227, 195, 0.45);
+}
+
+.card-crypto-sol2:nth-of-type(6) .icon-panel {
+  border: 1px solid rgba(204, 103, 30, 0.66);
+  box-shadow: 0 0 25px rgba(244, 111, 2, 0.75);
+}
+.card-crypto-sol2:nth-of-type(7) .icon-panel {
+  border: 1px solid rgba(243, 6, 225, 0.75);
+  box-shadow: 0 0 25px rgba(211, 17, 218, 0.7);
+}
+
+.card-crypto-sol2:nth-of-type(8) .icon-panel {
+  border: 1px solid rgba(127, 22, 237, 0.66);
+  box-shadow: 0 0 25px rgba(84, 27, 182, 0.58);
+}
+.card-title-about{
+  margin-top: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.cards-informations{
+  display: flex;
+  gap: 40px;
+  flex-wrap:wrap; /* 3 gaps de 40px entre 4 tarjetas */
+  max-width: 1300px;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.card-crypto-sol2{
+  border-radius: 10px;
+ padding: 15px;
+  flex: 1 1 22%;
+  max-width: 300px;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .cards-informations {
+    padding: 70px 20px;
+  }
+
+  .card-crypto-sol2 {
+    flex: 1 1 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+}
+
+.card-crypto-sol2:nth-child(1):hover {
+  border-color: rgba(0, 255, 163, 0.64);
+  box-shadow: 0 0 25px rgba(0, 255, 163, 0.25);
+}
+
+.card-crypto-sol2:nth-child(2):hover {
+  border-color: rgba(247, 147, 26, 0.61);
+  box-shadow: 0 0 25px rgba(247, 147, 26, 0.45);
+}
+.card-crypto-sol2:nth-child(3):hover {
+  border-color: rgba(49, 109, 195, 0.66);
+  box-shadow: 0 0 25px rgba(36, 105, 216, 0.58);
+
+}
+.card-crypto-sol2:nth-child(4):hover {
+  border-color: rgba(138, 26, 214, 0.64);
+  box-shadow: 0 0 25px rgba(159, 21, 220, 0.63);
+}
+
+.card-crypto-sol2:nth-child(5):hover{
+  border: 1px solid rgba(27, 228, 198, 0.61);
+  box-shadow: 0 0 25px rgba(17, 227, 195, 0.45);
+}
+
+.card-crypto-sol2:nth-child(6):hover{
+  border: 1px solid rgba(204, 103, 30, 0.66);
+  box-shadow: 0 0 25px rgba(244, 111, 2, 0.75);
+}
+.card-crypto-sol2:nth-child(7):hover{
+  border: 1px solid rgba(243, 6, 225, 0.75);
+  box-shadow: 0 0 25px rgba(211, 17, 218, 0.7);
+}
+
+.card-crypto-sol2:nth-child(8):hover{
+  border: 1px solid rgba(127, 22, 237, 0.66);
+  box-shadow: 0 0 25px rgba(84, 27, 182, 0.58);
+}
+
+.text-information{
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  margin-top: 10px;
 }
