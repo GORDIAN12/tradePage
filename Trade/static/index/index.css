@@ -198,3 +198,57 @@ color: #9ca3af;
   margin-right: 10px;
   vertical-align: middle;
 }
+
+    .crypto-cards {
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+      max-width: 400px;
+        border: 1px solid rgba(124, 58, 237, 0.2);
+
+    }
+
+.crypto-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.crypto-name {
+  flex: 1; /* 1 parte proporcional */
+  font-weight: bold;
+  color: white;
+}
+
+.crypto-price {
+  flex: 1.5; /* más espacio que name */
+  text-align: center;
+  color: white;
+}
+
+.crypto-change {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  color: green; /* puedes cambiar dinámicamente según positivo/negativo */
+}
+
+   .crypto-changes-less {
+     flex: 1;
+     text-align: right;
+     font-weight: bold;
+     color: red;
+    }
+
+   .tarjets-winners-losers {
+     display: flex;
+     justify-content: center; /* 🔹 Centra ambos bloques en el contenedor */
+     gap: 40px; /* 🔹 Espacio entre Ganadores y Perdedores */
+     padding: 50px;
+     flex-wrap: wrap; /* 🔹 Opcional: se apilan en móviles */
+   }

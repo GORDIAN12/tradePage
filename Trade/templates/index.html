@@ -2,9 +2,11 @@
 {% load static %}
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'index/index.css' %}">
+
 {% endblock %}
 
 {% block content %}
+
 <div class="index-page">
   <div class="content-layout">
     <!-- Texto a la izquierda -->
@@ -36,7 +38,7 @@
         </div>
 
         <div class="card-crypto-eth">
-        <div class="card-title">ETH/USD</div>
+            <span class="card-title"><img class="crypto-logo" src="{% static 'assets/eth.svg' %}" alt="Logo">ETH/USD</span>
         <div class="price" id="eth-price">$--</div>
         <p><span id="eth-change"></span></p>
         </div>
@@ -54,26 +56,39 @@
         <div class="card-title">DOT/USD</div>
         <div class="price" id="dot-price">$--</div>
         <p><span id="dot-change"></span></p>
+
         </div>
          <div class="card-crypto-eth">
-             <h6 style="color: aliceblue">Solana</h6>
+                       <span class="card-title"><img class="crypto-logo" src="{% static 'assets/sol.svg' %}" alt="Logo">Solana</span>
         <div class="card-title">SOL/USD</div>
         <div class="price" id="sol-price">$--</div>
         <p><span id="sol-change"></span></p>
         </div>
          <div class="card-crypto-eth">
-             <h6 style="color: aliceblue">Ripple</h6>
+                       <span class="card-title"><img class="crypto-logo" src="{% static 'assets/xrp.svg' %}" alt="Logo">Ripple</span>
         <div class="card-title">XRP/USD</div>
         <div class="price" id="xrp-price">$--</div>
         <p><span id="xrp-change"></span></p>
         </div>
         <div class="card-crypto-eth">
-        <h6 style="color: aliceblue">Litecoin</h6>
+                  <span class="card-title"><img class="crypto-logo" src="{% static 'assets/ltc.svg' %}" alt="Logo">Litecoin</span>
         <div class="card-title">LTC/USD</div>
         <div class="price" id="ltc-price">$--</div>
         <p><span id="ltc-change"></span></p>
         </div>
 </div>
+<div class="tarjets-winners-losers">
+  <div class="winners-block">
+    <h1>Ganadores</h1>
+    <div id="winners-container"></div>
+  </div>
+
+  <div class="losers-block">
+    <h1>Perdedores</h1>
+    <div id="losers-container"></div>
+  </div>
+</div>
+
 
 {% block extra_js %}
   <script src="{% static 'index/index.js' %}"></script>

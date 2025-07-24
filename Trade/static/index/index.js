@@ -47,3 +47,68 @@ async function fetchPrices() {
 
 fetchPrices();
 setInterval(fetchPrices, 20000);
+
+
+fetch('https://api.binance.com/api/v3/ticker/24hr')
+    .then(res => res.json())
+    .then(data => {
+        // Filtramos solo las criptos con cambio positivo (ganadoras)
+        const winners = data.filter(c => parseFloat(c.priceChangePercent) > 10);
+
+        // Opcional: ordenar por % de cambio descendente
+        winners.sort((a, b) => parseFloat(b.priceChangePercent) - parseFloat(a.priceChangePercent));
+
+        // Limitamos a las top 10 ganadoras
+        const topWinners = winners.slice(0, 2);
+
+        const container = document.getElementById('winners-container');
+
+        topWinners.forEach(crypto => {
+            const div = document.createElement('div');
+            div.className = 'crypto-cards';
+
+            div.innerHTML = `
+          <div class="crypto-row">
+  <div class="crypto-name">${crypto.symbol}</div>
+  <div class="crypto-price">$${parseFloat(crypto.lastPrice).toFixed(4)}</div>
+  <div class="crypto-change">+${parseFloat(crypto.priceChangePercent).toFixed(2)}%</div>
+</div>
+
+          `;
+
+            container.appendChild(div);
+        });
+    })
+    .catch(err => console.error('Error cargando datos de Binance:', err));
+
+fetch('https://api.binance.com/api/v3/ticker/24hr')
+    .then(res => res.json())
+    .then(data => {
+        // Filtramos solo las criptos con cambio positivo (ganadoras)
+        const losers = data.filter(c => parseFloat(c.priceChangePercent) < -10);
+
+        // Opcional: ordenar por % de cambio descendente
+        losers.sort((a, b) => parseFloat(b.priceChangePercent) - parseFloat(a.priceChangePercent));
+
+        // Limitamos a las top 10 ganadoras
+        const topLosers = losers.slice(0, 2);
+
+        const container = document.getElementById('losers-container');
+
+        topLosers.forEach(crypto => {
+            const div = document.createElement('div');
+            div.className = 'crypto-cards';
+
+            div.innerHTML = `
+            
+          <div class="crypto-row">
+            <div class="crypto-name">${crypto.symbol}</div>
+            <div class="crypto-price">$${parseFloat(crypto.lastPrice).toFixed(4)}</div>
+            <div class="crypto-changes-less">-${parseFloat(crypto.priceChangePercent).toFixed(2)}%</div>
+          </div>
+          `;
+
+            container.appendChild(div);
+        });
+    })
+    .catch(err => console.error('Error cargando datos de Binance:', err));
