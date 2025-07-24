@@ -34,6 +34,7 @@
       <div class="card-crypto">
           <span class="card-title"><img class="crypto-logo" src="{% static 'assets/btc.svg' %}" alt="Logo">BTC/USD</span>
             <div class="price" id="btc-price">$--</div>
+
             <p><span id="btc-change"></span></p>
         </div>
 
@@ -46,31 +47,32 @@
   </div>
 </div>
 <div class="text-Market">
-<h1>Mercado en Tiempo Real</h1><br>
-<p>Mantente al día con los precios y tendencias de las principales<br> criptomonedas del mercado</p>
+    <div class="text-Market-content">
+        <h1 style="color: white">Mercado en </h1><h1 style="color: #d946ef">Tiempo Real</h1></div>
+<h5 style="color:white; text-align: center; margin: 30px;">Mantente al día con los precios y tendencias de las principales<br> criptomonedas del mercado</h5>
 </div>
 </div>
 <div class="four-cards-crypto">
-        <div class="card-crypto-eth">
+        <div class="card-crypto-dot">
             <span class="card-title"><img class="crypto-logo" src="{% static 'assets/dot.svg' %}" alt="Logo">Polkadot</span>
         <div class="card-title">DOT/USD</div>
         <div class="price" id="dot-price">$--</div>
         <p><span id="dot-change"></span></p>
 
         </div>
-         <div class="card-crypto-eth">
+         <div class="card-crypto-sol">
                        <span class="card-title"><img class="crypto-logo" src="{% static 'assets/sol.svg' %}" alt="Logo">Solana</span>
         <div class="card-title">SOL/USD</div>
         <div class="price" id="sol-price">$--</div>
         <p><span id="sol-change"></span></p>
         </div>
-         <div class="card-crypto-eth">
+         <div class="card-crypto-xrp">
                        <span class="card-title"><img class="crypto-logo" src="{% static 'assets/xrp.svg' %}" alt="Logo">Ripple</span>
         <div class="card-title">XRP/USD</div>
         <div class="price" id="xrp-price">$--</div>
         <p><span id="xrp-change"></span></p>
         </div>
-        <div class="card-crypto-eth">
+        <div class="card-crypto-ltc">
                   <span class="card-title"><img class="crypto-logo" src="{% static 'assets/ltc.svg' %}" alt="Logo">Litecoin</span>
         <div class="card-title">LTC/USD</div>
         <div class="price" id="ltc-price">$--</div>
@@ -79,19 +81,20 @@
 </div>
 <div class="tarjets-winners-losers">
   <div class="winners-block">
-    <h1>Ganadores</h1>
-    <div id="winners-container"></div>
+      <h1 class="tarjets-titles">Ganadores</h1>
+    <div id="winners-container" class="panel-list"></div>
   </div>
 
   <div class="losers-block">
-    <h1>Perdedores</h1>
-    <div id="losers-container"></div>
+      <h1 class="tarjets-titles">Perdedores</h1>
+    <div id="losers-container" class="panel-list"></div>
   </div>
 </div>
 
 
 {% block extra_js %}
   <script src="{% static 'index/index.js' %}"></script>
+
 {% endblock %}
 
 

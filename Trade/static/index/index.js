@@ -59,7 +59,7 @@ fetch('https://api.binance.com/api/v3/ticker/24hr')
         winners.sort((a, b) => parseFloat(b.priceChangePercent) - parseFloat(a.priceChangePercent));
 
         // Limitamos a las top 10 ganadoras
-        const topWinners = winners.slice(0, 2);
+        const topWinners = winners.slice(0, 3);
 
         const container = document.getElementById('winners-container');
 
@@ -91,7 +91,7 @@ fetch('https://api.binance.com/api/v3/ticker/24hr')
         losers.sort((a, b) => parseFloat(b.priceChangePercent) - parseFloat(a.priceChangePercent));
 
         // Limitamos a las top 10 ganadoras
-        const topLosers = losers.slice(0, 2);
+        const topLosers = losers.slice(0, 3);
 
         const container = document.getElementById('losers-container');
 
@@ -104,7 +104,7 @@ fetch('https://api.binance.com/api/v3/ticker/24hr')
           <div class="crypto-row">
             <div class="crypto-name">${crypto.symbol}</div>
             <div class="crypto-price">$${parseFloat(crypto.lastPrice).toFixed(4)}</div>
-            <div class="crypto-changes-less">-${parseFloat(crypto.priceChangePercent).toFixed(2)}%</div>
+            <div class="crypto-change-lost">${parseFloat(crypto.priceChangePercent).toFixed(2)}%</div>
           </div>
           `;
 

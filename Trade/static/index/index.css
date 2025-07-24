@@ -90,23 +90,33 @@ color: #9ca3af;
 
 .card-crypto  {
   flex: 1;
-  background-image: radial-gradient(circle at 30% 40%, rgba(124, 58, 237, 0.15), transparent 60%);
-  border: 1px solid rgba(124, 58, 237, 0.2);
   border-radius: 30px;
-  border-color: green;
+  background-image: radial-gradient(circle at 30% 40%, rgba(247, 147, 26, 0.15), transparent 70%);
+  border: 1px solid rgba(247, 147, 26, 0.3);
   padding: 15px;
-  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(247, 147, 26, 0.2);
+}
+.card-crypto:hover {
+  border-color: rgba(247, 147, 26, 0.61);
+  box-shadow: 0 0 25px rgba(247, 147, 26, 0.45);
 }
 
 .card-crypto-eth  {
   flex: 1;
-  background-image: radial-gradient(circle at 30% 40%, rgba(124, 58, 237, 0.15), transparent 60%);
-  border: 1px solid rgba(124, 58, 237, 0.2);
+  background-image: radial-gradient(circle at 30% 40%, rgba(60, 60, 61, 0.39), transparent 60%);
+  border: 1px solid rgba(60, 60, 61, 0.57);
   border-radius: 30px;
-  border-color: blue;
   padding: 15px;
   transition: 0.3s ease;
+    box-shadow: 0 0 20px rgba(60, 60, 61, 0.2);
 }
+
+
+.card-crypto-eth:hover {
+  border-color: rgba(60, 60, 61, 0.81);
+  box-shadow: 0 0 25px rgba(227, 222, 218, 0.38);
+}
+
 .card-title {
   font-size: 0.95rem;
   color: white;
@@ -142,6 +152,13 @@ color: #9ca3af;
 
 .icon {
   margin-right: 8px;
+}
+
+.text-Market-content{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-weight: bold;
 }
 .gradient-button {
   padding: 1em 2em;
@@ -190,8 +207,66 @@ color: #9ca3af;
   gap: 40px 40px;
   padding: 20px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
+.card-crypto-dot{
+   flex: 1;
+    background-image: radial-gradient(circle at 30% 40%, rgba(230, 0, 122, 0.15), transparent 60%);
+  border-radius: 30px;
+   border: 1px solid rgba(230, 0, 122, 0.25); /* rosa polkadot */
+  padding: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(230, 0, 122, 0.25);
+}
+
+.card-crypto-dot:hover {
+  border-color: #e6007a;
+  box-shadow: 0 0 25px rgba(230, 0, 122, 0.4);
+}
+
+.card-crypto-sol{
+   flex: 1;
+    background-image: radial-gradient(circle at 30% 40%, rgba(0, 255, 163, 0.15), transparent 60%);
+  border-radius: 30px;
+   border: 1px solid rgba(0, 255, 163, 0.25); /* rosa polkadot */
+  padding: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 163, 0.25);
+}
+
+.card-crypto-sol:hover {
+  border-color: rgba(0, 255, 163, 0.64);
+  box-shadow: 0 0 25px rgba(0, 255, 163, 0.25);
+}
+.card-crypto-xrp{
+   flex: 1;
+    background-image: radial-gradient(circle at 30% 40%, rgba(37, 170, 225, 0.15), transparent 60%);
+  border-radius: 30px;
+   border: 1px solid rgba(37, 170, 225, 0.3); /* rosa polkadot */
+  padding: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(37, 170, 255, 0.3);
+}
+
+.card-crypto-xrp:hover {
+  border-color: rgba(37, 170, 255, 0.67);
+  box-shadow: 0 0 25px rgba(0, 255, 163, 0.25);
+}
+.card-crypto-ltc{
+   flex: 1;
+  background-image: radial-gradient(circle at 30% 40%, rgba(34, 99, 200, 0.36), transparent 60%);
+  border: 1px solid rgba(10, 86, 218, 0.3);
+  border-radius: 30px;
+  padding: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(52, 93, 157, 0.44);
+}
+
+.card-crypto-ltc:hover {
+  border-color: rgba(49, 109, 195, 0.66);
+  box-shadow: 0 0 25px rgba(36, 105, 216, 0.58);
+}
 .crypto-logo{
   width: 24px;
   height: 24px;
@@ -201,54 +276,86 @@ color: #9ca3af;
 
     .crypto-cards {
       padding: 10px 15px;
-      margin-bottom: 10px;
+      margin: 2px;
       border-radius: 6px;
       box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
       max-width: 400px;
-        border: 1px solid rgba(124, 58, 237, 0.2);
-
     }
+
+.tarjets-winners-losers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.panel-list {
+    background-image: radial-gradient(circle at 30% 40%, rgba(124, 58, 237, 0.15), transparent 60%);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  min-width: 400px;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
 
 .crypto-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
-  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
   width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 10px;
   box-sizing: border-box;
 }
 
+.crypto-row:last-child {
+  border-bottom: none;
+}
+
 .crypto-name {
-  flex: 1; /* 1 parte proporcional */
+  flex: 2;
   font-weight: bold;
   color: white;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: unset;
 }
 
 .crypto-price {
-  flex: 1.5; /* más espacio que name */
+  flex: 1.5;
   text-align: center;
-  color: white;
+  color: #cccccc;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .crypto-change {
   flex: 1;
   text-align: right;
   font-weight: bold;
-  color: green; /* puedes cambiar dinámicamente según positivo/negativo */
+  white-space: nowrap;
+  color: #4caf50;
 }
 
-   .crypto-changes-less {
-     flex: 1;
-     text-align: right;
-     font-weight: bold;
-     color: red;
-    }
+.crypto-change-lost {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ff4d4d;
+}
 
-   .tarjets-winners-losers {
-     display: flex;
-     justify-content: center; /* 🔹 Centra ambos bloques en el contenedor */
-     gap: 40px; /* 🔹 Espacio entre Ganadores y Perdedores */
-     padding: 50px;
-     flex-wrap: wrap; /* 🔹 Opcional: se apilan en móviles */
-   }
+.tarjets-titles{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin: 30px;
+}
