@@ -112,3 +112,16 @@ fetch('https://api.binance.com/api/v3/ticker/24hr')
         });
     })
     .catch(err => console.error('Error cargando datos de Binance:', err));
+
+//traer los elemntos del DOm
+
+const q=document.querySelectorAll('.q');
+const a=document.querySelectorAll('.a');
+const arr=document.querySelectorAll('.arrow');
+
+for(let i=0; i<q.length; i++){
+    q[i].addEventListener('click', () => {
+        a[i].classList.toggle('a-opened');
+        arr[i].classList.toggle('arrow-rotate');
+    });
+}
